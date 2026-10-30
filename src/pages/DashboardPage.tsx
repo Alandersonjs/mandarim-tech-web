@@ -75,6 +75,14 @@ export function DashboardPage() {
         <p className="text-sm text-slate-500 dark:text-slate-400">
           Rumo ao Novo HSK 3.0 em 30 dias: um pouco de revisão todos os dias vence qualquer maratona.
         </p>
+        <a
+          href="https://forms.gle/jgAye6f6sEsQ7xMZ8"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-flex whitespace-nowrap rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-emerald-900/20 transition-colors hover:bg-emerald-500"
+        >
+          Responder Pesquisa ➔
+        </a>
       </header>
 
       {backendDown ? (

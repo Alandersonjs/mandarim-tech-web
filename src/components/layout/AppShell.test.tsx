@@ -49,6 +49,16 @@ describe('AppShell', () => {
     expect(await screen.findByText('API online')).toBeInTheDocument()
   })
 
+  it('links to the survey in a safe new tab', () => {
+    renderShell()
+    expect(screen.getByRole('link', { name: 'Responder Pesquisa ➔' })).toHaveAttribute(
+      'href',
+      'https://forms.gle/jgAye6f6sEsQ7xMZ8',
+    )
+    expect(screen.getByRole('link', { name: 'Responder Pesquisa ➔' })).toHaveAttribute('target', '_blank')
+    expect(screen.getByRole('link', { name: 'Responder Pesquisa ➔' })).toHaveAttribute('rel', 'noopener noreferrer')
+  })
+
   it('shows "API offline" when the health check fails', async () => {
     vi.mocked(getHealth).mockRejectedValue(new ApiError('sem conexão', 'network'))
     renderShell()

@@ -105,6 +105,14 @@ export function AppShell() {
           </div>
           <div className="hidden md:block" />
           <div className="flex items-center gap-1.5">
+            <a
+              href="https://forms.gle/jgAye6f6sEsQ7xMZ8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whitespace-nowrap rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-emerald-900/20 transition-colors hover:bg-emerald-500"
+            >
+              Responder Pesquisa ➔
+            </a>
             <ApiStatusPill />
             <AudioSettingsMenu />
             <ThemeToggle />

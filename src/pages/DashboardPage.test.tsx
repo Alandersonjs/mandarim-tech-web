@@ -110,6 +110,10 @@ describe('DashboardPage', () => {
     renderWithProviders(<DashboardPage />)
     await screen.findByText('68')
 
+    expect(screen.getByRole('link', { name: 'Responder Pesquisa ➔' })).toHaveAttribute(
+      'href',
+      'https://forms.gle/jgAye6f6sEsQ7xMZ8',
+    )
     expect(screen.getByRole('link', { name: /revisar agora/i })).toHaveAttribute('href', '/revisao')
     expect(screen.getByRole('link', { name: /explorar vocabulário/i })).toHaveAttribute('href', '/vocabulario')
     expect(screen.getByRole('link', { name: /playground/i })).toHaveAttribute('href', '/playground')
